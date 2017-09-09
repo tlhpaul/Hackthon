@@ -46,13 +46,21 @@
         android:gravity="center|bottom"
         android:orientation="vertical" >
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center_horizontal|center"
-        android:onClick="clickedButton"
-        android:text="Scan" />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center_horizontal|left"
+            android:onClick="clickedScanButton"
+            android:text="Scan" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center_horizontal|right"
+            android:onClick="clickedStatusButton"
+            android:text="Status" />
 
     </LinearLayout>
 </LinearLayout>

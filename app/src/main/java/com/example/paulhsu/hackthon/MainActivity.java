@@ -14,13 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTitle("Nutrient Master");
         setContentView(R.layout.activity_main);
-
     }
 
     public void onLaunchButton(View v) {
         Intent i = new Intent(this, DisplayActivity.class);
         startActivity(i);
-
     }
 
 }

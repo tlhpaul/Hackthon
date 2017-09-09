@@ -1,5 +1,6 @@
 package com.example.paulhsu.hackthon.ScannerPack;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -20,7 +21,7 @@ import com.example.paulhsu.hackthon.R;
 
 import java.io.IOException;
 
-public class Scan extends AppCompatActivity {
+public class Scan extends Activity {
     SurfaceView cameraPreview;
     private static final String SCANTAG = "0";
     @Override

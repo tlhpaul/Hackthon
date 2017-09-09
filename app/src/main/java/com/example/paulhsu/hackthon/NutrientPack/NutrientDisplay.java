@@ -1,6 +1,7 @@
 package com.example.paulhsu.hackthon.NutrientPack;
 
 import android.app.Activity;
+import android.os.Bundle;
 import android.widget.RelativeLayout;
 
 import com.example.paulhsu.hackthon.R;
@@ -16,6 +17,12 @@ import java.util.ArrayList;
 public class NutrientDisplay extends Activity {
     private BarChart chart = (BarChart)findViewById(R.id.chart);
     private ArrayList<BarEntry> entries = new ArrayList<>();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.nutrient_display);
+    }
 
     private void updateEntries(ArrayList<Integer> nutrients){
         if(entries.size() != nutrients.size()) {

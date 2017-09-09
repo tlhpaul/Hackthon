@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Hackthon</string>
     <string name="title_activity_display">DisplayActivity</string>
-    <string name="invalid_snackbar">detector not operational</string>
+    <!--SnackBar Titles-->
+    <string name="invalid_snackbar_detector">Detector not operational</string>
+    <string name="invalid_snackbar_permission">Camera permission missing</string>
+    <string name="NoPermission_snackbar">You will not be able to scan</string>
+    <string name="Permission_snackbar">Camera unlocked</string>
 </resources>

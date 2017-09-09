@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.example.paulhsu.hackthon.NutrientPack.NutrientDisplay;
 import com.example.paulhsu.hackthon.OpenPack.DisplayActivity;
-import com.example.paulhsu.hackthon.ScannerPack.Scan;
+import com.example.paulhsu.hackthon.ScanPack.GrabBarcode;
 
 public class MainActivity extends AppCompatActivity {
 

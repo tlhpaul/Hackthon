@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.paulhsu.hackthon.NutrientTrackerMain.DisplayActivity;
+import com.example.paulhsu.hackthon.OpenPack.DisplayActivity;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.paulhsu.hackthon.NutrientTrackerMain;
+package com.example.paulhsu.hackthon.NutrientPack;
 
 import java.util.ArrayList;
 

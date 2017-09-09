@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NutrientTrackerMain.DisplayActivity"
+            android:name=".OpenPack.DisplayActivity"
             android:label="@string/title_activity_display"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

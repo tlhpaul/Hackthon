@@ -23,7 +23,6 @@ import java.io.IOException;
 
 class Scan extends Activity {
     SurfaceView cameraPreview;
-    private Boolean permissionGranted = false;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -32,7 +31,6 @@ class Scan extends Activity {
         if(ContextCompat.checkSelfPermission(this,
                 Manifest.permission.CAMERA)
                 == PackageManager.PERMISSION_GRANTED){
-            permissionGranted = true;
             getCameraSource();
         }
     }

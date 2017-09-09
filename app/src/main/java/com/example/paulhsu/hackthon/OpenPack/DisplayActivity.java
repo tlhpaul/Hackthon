@@ -12,7 +12,10 @@ import android.view.View;
 import com.example.paulhsu.hackthon.NutrientPack.NutrientDisplay;
 import com.example.paulhsu.hackthon.NutrientPack.NutrientTracker;
 import com.example.paulhsu.hackthon.R;
-import com.example.paulhsu.hackthon.ScannerPack.Scan;
+import com.example.paulhsu.hackthon.ScanPack.GrabBarcode;
+
+import java.util.Scanner;
+
 
 public class DisplayActivity extends Activity {
 
@@ -24,7 +27,7 @@ public class DisplayActivity extends Activity {
     }
 
     public void clickedScanButton(View v) {
-        Intent intent = new Intent(this, Scan.class);
+        Intent intent = new Intent(this, GrabBarcode.class);
         startActivity(intent);
     }
 

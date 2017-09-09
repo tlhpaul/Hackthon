@@ -23,12 +23,13 @@ import android.app.Activity;  import android.content.Intent; 
 public class Scan extends Activity { 
     SurfaceView cameraPreview; 
     private static final String SCANTAG = "0"; 
-    @Override 
-    protected void onCreate(Bundle savedInstanceState) { 
-        super.onCreate(savedInstanceState); 
+
+    @Override
+    protected  void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.scan_display); 
         cameraPreview = (SurfaceView) findViewById(R.id.cameraPreview); 
-    }  
+    }
 
     private SparseArray<Barcode> scanImage() { 
         BarcodeDetector detector = new BarcodeDetector.Builder(getApplicationContext()) 
@@ -75,4 +76,6 @@ public class Scan extends Activity { 
                     intent.putExtra("barcode", barcodes.valueAt(0)); 
                     setResult(CommonStatusCodes.SUCCESS, intent); finish(); } } 
         }); return null; } 
+
+
 }

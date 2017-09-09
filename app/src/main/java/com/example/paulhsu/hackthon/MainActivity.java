@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.paulhsu.hackthon.NutrientPack.NutrientDisplay;
 import com.example.paulhsu.hackthon.OpenPack.DisplayActivity;
+import com.example.paulhsu.hackthon.ScannerPack.Scan;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,5 +22,4 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, DisplayActivity.class);
         startActivity(i);
     }
-
 }

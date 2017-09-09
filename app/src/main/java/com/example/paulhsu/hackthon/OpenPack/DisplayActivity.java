@@ -33,6 +33,4 @@ public class DisplayActivity extends Activity {
         startActivity(intent);
     }
 
-
-
 }

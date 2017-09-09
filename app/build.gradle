@@ -31,4 +31,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.google.android.gms:play-services-fitness:10.2.1'
     compile 'com.google.android.gms:play-services-wearable:10.2.1'
+    compile 'com.google.android.gms:play-services-vision:10.2.1'
 }

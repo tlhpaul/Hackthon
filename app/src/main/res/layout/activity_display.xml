@@ -40,6 +40,52 @@
         android:layout_gravity= "left"
         android:text = "Calories" />
 
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity= "left"
+        android:layout_marginBottom="15dp"
+        android:text = "Startegy" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity= "left"
+        android:text = "protein: " />
+
+    <TextView
+        android:id = "@+id/proteinCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity= "left"
+        android:text = "0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity= "left"
+        android:text = "fat: " />
+
+    <TextView
+        android:id = "@+id/fatCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity= "left"
+        android:text = "0" />
+
+
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"

@@ -33,8 +33,14 @@
 
         <activity
             android:name=".ScanPack.GrabBarcode"
+            android:label="GrabBarCode"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".ScanPack.Scan"
             android:label="Scan"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
 
     </application>
     <uses-permission android:name="android.permission.INTERNET" />

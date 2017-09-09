@@ -3,6 +3,7 @@ package com.example.paulhsu.hackthon.ScanPack;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 
@@ -20,7 +21,7 @@ public class GrabBarcode extends Activity {
 
     public void scanBarcode(View v){
         Intent intent = new Intent(this, Scan.class);
-        startActivityForResult(intent, 0);
+        startActivity(intent);
     }
 
     @Override
@@ -39,9 +40,6 @@ public class GrabBarcode extends Activity {
     public SparseArray<Barcode> getBarcode() {
         return barcode;
     }
-
-
-
 
 }
 

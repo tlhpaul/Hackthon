@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -23,6 +24,7 @@ import java.io.IOException;
 
 class Scan extends Activity {
     SurfaceView cameraPreview;
+    private final static String TAG = "TAGSTRING";
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -49,6 +51,8 @@ class Scan extends Activity {
         cameraPreview.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
+                Log.e(TAG, String.valueOf(ActivityCompat.checkSelfPermission(Scan.this,
+                        Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED));
                 if(ActivityCompat.checkSelfPermission(Scan.this, Manifest.permission.CAMERA)
                         !=PackageManager.PERMISSION_GRANTED) {
                     return;

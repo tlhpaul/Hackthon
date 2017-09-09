@@ -2,6 +2,7 @@ package com.example.paulhsu.hackthon.ScanPack;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.SparseArray;
 
 import com.example.paulhsu.hackthon.R;
 

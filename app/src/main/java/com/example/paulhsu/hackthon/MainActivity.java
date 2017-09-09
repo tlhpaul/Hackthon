@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onLaunchButton(View v) {
         Intent i = new Intent(this, DisplayActivity.class);
-
+        startActivity(i);
 
     }
 

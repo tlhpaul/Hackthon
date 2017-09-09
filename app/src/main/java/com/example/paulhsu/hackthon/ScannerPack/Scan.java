@@ -36,7 +36,7 @@ public class Scan extends AppCompatActivity {
         if(!detector.isOperational()){
             //findView is wrong
             Snackbar.make(findViewById(R.id.match_parent), R.string.invalid_snackbar, Snackbar.LENGTH_LONG)
-                    .setActionTextColor(getResources().getColor(R.color.BLUE))
+                    .setActionTextColor(getResources().getColor(R.color.blue))
                     .setDuration(3000).show();
             return null;
         }

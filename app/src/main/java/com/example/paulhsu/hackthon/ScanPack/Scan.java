@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.SurfaceView;
 
 import com.example.paulhsu.hackthon.R;
+import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 class Scan extends Activity {
@@ -17,7 +18,10 @@ class Scan extends Activity {
         //getCameraSource();
     }
 
-//    private void getCameraSource(){
-//        BarcodeDetector;
-//    }
+    private void getCameraSource(){
+        BarcodeDetector barcodeDetector = new BarcodeDetector.Builder(this).build();
+        final CameraSource cameraSource = new CameraSource.Builder(this, barcodeDetector)
+                .setAutoFocusEnabled(true)
+                .build();
+    }
 }

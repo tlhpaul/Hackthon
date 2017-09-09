@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,24 +7,54 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:orientation="vertical"
+    android:gravity="center|bottom"
     tools:context="com.example.paulhsu.hackthon.OpenPack.DisplayActivity">
 
-    <TextView
+    <ImageView
+        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/profilepictures"
+        />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity= "left"
+        android:layout_marginBottom="15dp"
+        android:text = "Profile" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity= "left"
+        android:layout_marginBottom="15dp"
         android:text = "Food consumed" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity= "left"
         android:text = "Calories" />
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
 
     <Button
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal|center"
+        android:onClick="clickedButton"
         android:text="Scan" />
 
+    </LinearLayout>
 </LinearLayout>
 
 

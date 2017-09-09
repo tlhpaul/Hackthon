@@ -15,13 +15,14 @@ import java.util.ArrayList;
 
 
 public class NutrientDisplay extends Activity {
-    private BarChart chart = (BarChart)findViewById(R.id.chart);
+    private BarChart chart;
     private ArrayList<BarEntry> entries = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nutrient_display);
+        chart = (BarChart)findViewById(R.id.chart);
     }
 
     private void updateEntries(ArrayList<Integer> nutrients){

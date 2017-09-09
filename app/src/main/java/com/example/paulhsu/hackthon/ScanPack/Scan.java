@@ -14,10 +14,10 @@ class Scan extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camera_layout);
         cameraPreview = (SurfaceView)findViewById(R.id.cameraPreview);
-        getCameraSource();
+        //getCameraSource();
     }
 
-    private void getCameraSource(){
-        BarcodeDetector
-    }
+//    private void getCameraSource(){
+//        BarcodeDetector;
+//    }
 }

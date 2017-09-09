@@ -21,6 +21,8 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
 
+import static android.R.attr.tag;
+
 
 class Scan extends Activity {
     SurfaceView cameraPreview;
@@ -30,11 +32,8 @@ class Scan extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camera_layout);
         cameraPreview = (SurfaceView)findViewById(R.id.cameraPreview);
-        if(ContextCompat.checkSelfPermission(this,
-                Manifest.permission.CAMERA)
-                == PackageManager.PERMISSION_GRANTED){
-            getCameraSource();
-        }
+        getCameraSource();
+
     }
 
     private void getCameraSource(){
@@ -42,7 +41,9 @@ class Scan extends Activity {
                 new BarcodeDetector.Builder(getApplicationContext())
                         .setBarcodeFormats(Barcode.DATA_MATRIX | Barcode.QR_CODE)
                         .build();
+        Log.v(TAG, "detector is operatinal.");
         if(!detector.isOperational()){
+            Log.v(TAG, "detector is not operatinal.");
             return;
         }
         final CameraSource cameraSource = new CameraSource.Builder(Scan.this, detector)

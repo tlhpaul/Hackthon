@@ -60,7 +60,7 @@ public class NutrientDisplay extends Activity {
         }
     }
 
-    public void updateVisual(ArrayList<Integer> nutrients){
+    private void updateVisual(ArrayList<Integer> nutrients){
         BarDataSet dataSet = new BarDataSet(entries, "Nutrient percent");
         BarData barData = new BarData(dataSet);
         chart.setData(barData);
@@ -77,11 +77,11 @@ public class NutrientDisplay extends Activity {
     }
 
     public void AddValuesToBarEntryLabels(){
-        BarEntryLabels.add("January");
-        BarEntryLabels.add("February");
-        BarEntryLabels.add("March");
-        BarEntryLabels.add("April");
-        BarEntryLabels.add("May");
-        BarEntryLabels.add("June");
+        BarEntryLabels.add("Calories");
+        BarEntryLabels.add("Sugar");
+        BarEntryLabels.add("Salt");
+        BarEntryLabels.add("Carbs");
+        BarEntryLabels.add("Fat");
+        BarEntryLabels.add("Protein");
     }
 }

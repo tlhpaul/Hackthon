@@ -1,24 +1,34 @@
 package com.example.paulhsu.hackthon.NutrientPack;
 
-import java.util.ArrayList;
-
 public class NutrientTracker {
 
     private int days;
-    private ArrayList<Integer> freeNutrients;
+    private int[] blockNutrients = new int[6];
+    private int[] consumedNutrients = new int[6];
+    private float[] percentConsumed = new float[6];
 
-    public NutrientTracker(int days, ArrayList<Integer> freeNutrients){
+
+    public NutrientTracker(int days, int[] blockNutrients){
         this.days = days;
-        this.freeNutrients = freeNutrients;
-        for(int nutrient: freeNutrients){
-            nutrient *= days;
+        this.blockNutrients = blockNutrients;
+        for(int i = 0; i < blockNutrients.length; i++){
+            int nutrient = blockNutrients[i];
+            blockNutrients[i] = nutrient * days;
         }
     }
     public int getDays() {
         return days;
     }
 
-    public ArrayList<Integer> getFreeNutrients() {
-        return freeNutrients;
+    public void updateNutrients(int[] newItem){ //arg may differ based on API
+        for(int i = 0; i < consumedNutrients.length; i ++){
+            consumedNutrients[i] += newItem[i];
+            percentConsumed[i] = (consumedNutrients[i]/blockNutrients[i]) * 100;
+        }
+    }
+
+    public float[] getPercentConsumed() {
+
+        return percentConsumed;
     }
 }

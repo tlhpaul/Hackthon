@@ -8,7 +8,7 @@ public class NutrientTracker {
     private float[] percentConsumed = new float[6];
 
 
-    public NutrientTracker(int days, int[] blockNutrients){
+    public NutrientTracker(int days, int[] blockNutrients){ //called in Main
         this.days = days;
         this.blockNutrients = blockNutrients;
         for(int i = 0; i < blockNutrients.length; i++){
@@ -20,14 +20,14 @@ public class NutrientTracker {
         return days;
     }
 
-    public void updateNutrients(int[] newItem){ //arg may differ based on API
+    public void updateNutrients(int[] newItem){ //arg may differ based on API //called in GrabBarcode
         for(int i = 0; i < consumedNutrients.length; i ++){
             consumedNutrients[i] += newItem[i];
             percentConsumed[i] = (consumedNutrients[i]/blockNutrients[i]) * 100;
         }
     }
 
-    public float[] getPercentConsumed() {
+    public float[] getPercentConsumed() { // called in Display
 
         return percentConsumed;
     }

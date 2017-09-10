@@ -23,7 +23,7 @@ import java.util.Scanner;
 
 public class DisplayActivity extends Activity {
     private String[] arraySpinner;
-    private String answer;
+    private static String answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,8 @@ public class DisplayActivity extends Activity {
         setTitle("Home Page");
         setContentView(R.layout.activity_display);
         this.arraySpinner = new String[] {
-                "low protein", "high protein", "low sugar", "high suagr", "low fat", "high fat"
+                "2000 calorie", "low protein", "high protein",
+                "low sugar", "high sugar", "low fat", "high fat"
         };
         Spinner s = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -54,9 +55,11 @@ public class DisplayActivity extends Activity {
         startActivity(intent);
     }
 
+    public static String getAnswer() {
+        return answer;
+    }
 
-
-//
+    //
 //
 //    public void onItemSelected(AdapterView<?> parent, View view, int position,
 //                               long id) {

@@ -6,6 +6,7 @@ import android.widget.RelativeLayout;
 
 import com.example.paulhsu.hackthon.OpenPack.DisplayActivity;
 import com.example.paulhsu.hackthon.R;
+import com.example.paulhsu.hackthon.ScanPack.GrabBarcode;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
@@ -31,8 +32,10 @@ public class NutrientDisplay extends Activity {
         BARENTRY = new ArrayList<>();
         final String strategy = DisplayActivity.getAnswer();
         BarEntryLabels = new ArrayList<>();
-        float[] entries = new NutrientTracker(7, new NutrientBlockMaker(strategy).
-                getNutrientBlocks()).getPercentConsumed();
+        NutrientTracker tracker = new NutrientTracker(7, new NutrientBlockMaker(strategy).
+                getNutrientBlocks());
+        updateTracker(tracker, new GrabBarcode().getPurchasedItems());
+        float[] entries = tracker.getPercentConsumed();
         updateVisual(entries);
 
         AddValuesToBarEntryLabels();
@@ -67,6 +70,12 @@ public class NutrientDisplay extends Activity {
         BarData barData = new BarData(dataSet);
         chart.setData(barData);
         chart.invalidate();
+    }
+
+    private void updateTracker(NutrientTracker tracker, ArrayList<int[]> boughtItems){
+        for(int[] item: boughtItems){
+            tracker.updateNutrients(item);
+        }
     }
 
     public void AddValuesToBarEntryLabels(){

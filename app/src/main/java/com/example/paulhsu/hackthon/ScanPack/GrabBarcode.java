@@ -7,12 +7,16 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 
+import com.example.paulhsu.hackthon.NutrientPack.NutrientTracker;
 import com.example.paulhsu.hackthon.R;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.barcode.Barcode;
 
+import java.util.ArrayList;
+
 public class GrabBarcode extends Activity {
-    private SparseArray<Barcode> barcode = new SparseArray<>();
+    private Barcode barcode = new Barcode();
+    private static ArrayList<int[]> purchasedItems = null;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -30,6 +34,7 @@ public class GrabBarcode extends Activity {
             if(resultCode == CommonStatusCodes.SUCCESS){
                 if(data != null){
                     barcode = data.getParcelableExtra("barcode");
+                    purchasedItems = new BarcodeQuery(barcode).convert();
                 }
             }
         }
@@ -37,9 +42,11 @@ public class GrabBarcode extends Activity {
 
     }
 
-    public SparseArray<Barcode> getBarcode() {
-        return barcode;
+
+    public ArrayList<int[]> getPurchasedItems() {
+        return purchasedItems;
     }
+
 
 }
 
